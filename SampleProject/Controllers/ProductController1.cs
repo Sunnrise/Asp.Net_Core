@@ -66,6 +66,7 @@ namespace SampleProject.Controllers
             {
                 return View();
             }
+            // ActionResult is the base class for all the result types in ASP.NET Core MVC.
         }
         #endregion
         #region IActionResult
@@ -73,6 +74,7 @@ namespace SampleProject.Controllers
         //{
 
         //}
+        // IActionResult is the base interface for all the result types in ASP.NET Core MVC.
         #endregion
     }
 }
