@@ -34,17 +34,22 @@ namespace SampleProject.Controllers
         //}
         #endregion
         #region EmptyResult
-        public EmptyResult GetProducts()
-        {
-            return new EmptyResult();
-        }
-        //or
-        public void GetProducts1()
-        {
-            //return new EmptyResult();
-        }
+        //public EmptyResult GetProducts()
+        //{
+        //    return new EmptyResult();
+        //}
+        ////or
+        //public void GetProducts1()
+        //{
+        //    //return new EmptyResult();
+        //}
         #endregion
         #region ContentResult
+        public ContentResult GetProducts()
+        {
+            ContentResult result = Content("This is a content result");
+            return result;
+        }
         #endregion
         #region ActionResult
         #endregion
