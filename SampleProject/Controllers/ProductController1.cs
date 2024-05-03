@@ -5,15 +5,21 @@ namespace SampleProject.Controllers
     public class ProductController : Controller
     {
         #region ViewResult
-        public ViewResult GetProducts()
+        //public ViewResult GetProducts()
+        //{
+        //    ViewResult result = View();
+        //    return result;
+
+        //}
+        #endregion
+        #region PartialViewResult
+        public PartialViewResult GetProducts()
         {
-            ViewResult result = View();
+            PartialViewResult result = PartialView();
+
             return result;
 
         }
-        #endregion
-        #region PartialViewResult
-
         #endregion
         #region JsonResult
 
