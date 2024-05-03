@@ -45,16 +45,34 @@ namespace SampleProject.Controllers
         //}
         #endregion
         #region ContentResult
-        public ContentResult GetProducts()
-        {
-            ContentResult result = Content("This is a content result");
-            return result;
-        }
+        //public ContentResult GetProducts()
+        //{
+        //    ContentResult result = Content("This is a content result");
+        //    return result;
+        //}
         #endregion
         #region ActionResult
+        public ActionResult GetProducts()
+        {
+           if (true)
+            {
+                return Json(new object());
+            }
+            else if (true)
+            {
+                return Content("This is a content result");
+            }
+            else
+            {
+                return View();
+            }
+        }
         #endregion
         #region IActionResult
+        //public IActionResult GetProducts()
+        //{
 
+        //}
         #endregion
     }
 }
