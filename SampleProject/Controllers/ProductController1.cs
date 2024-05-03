@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SampleProject.Models;
 
 namespace SampleProject.Controllers
 {
@@ -13,16 +14,26 @@ namespace SampleProject.Controllers
         //}
         #endregion
         #region PartialViewResult
-        public PartialViewResult GetProducts()
-        {
-            PartialViewResult result = PartialView();
+        //public PartialViewResult GetProducts()
+        //{
+        //    PartialViewResult result = PartialView();
 
-            return result;
+        //    return result;
 
-        }
+        //}
         #endregion
         #region JsonResult
+        public JsonResult GetProducts()
+        {
+            JsonResult result = Json(new Product 
+            { Id = 1,
+              ProductName = "Laptop",
+              Quantity=15
+            });
+            return result;
 
+
+        }
         #endregion
         #region EmptyResult
 
