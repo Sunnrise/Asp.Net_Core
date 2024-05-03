@@ -23,20 +23,26 @@ namespace SampleProject.Controllers
         //}
         #endregion
         #region JsonResult
-        public JsonResult GetProducts()
-        {
-            JsonResult result = Json(new Product 
-            { Id = 1,
-              ProductName = "Laptop",
-              Quantity=15
-            });
-            return result;
-
-
-        }
+        //public JsonResult GetProducts()
+        //{
+        //    JsonResult result = Json(new Product 
+        //    { Id = 1,
+        //      ProductName = "Laptop",
+        //      Quantity=15
+        //    });
+        //    return result;
+        //}
         #endregion
         #region EmptyResult
-
+        public EmptyResult GetProducts()
+        {
+            return new EmptyResult();
+        }
+        //or
+        public void GetProducts1()
+        {
+            //return new EmptyResult();
+        }
         #endregion
         #region ContentResult
         #endregion
