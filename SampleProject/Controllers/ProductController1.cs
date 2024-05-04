@@ -3,6 +3,7 @@ using SampleProject.Models;
 
 namespace SampleProject.Controllers
 {
+    [NonController]//This attribute is used to exclude a public class from the controller.
     public class ProductController : Controller
     {
         #region ViewResult
@@ -52,29 +53,36 @@ namespace SampleProject.Controllers
         //}
         #endregion
         #region ActionResult
-        public ActionResult GetProducts()
-        {
-           if (true)
-            {
-                return Json(new object());
-            }
-            else if (true)
-            {
-                return Content("This is a content result");
-            }
-            else
-            {
-                return View();
-            }
-            // ActionResult is the base class for all the result types in ASP.NET Core MVC.
-        }
+        //public ActionResult GetProducts()
+        //{
+        //   if (true)
+        //    {
+        //        return Json(new object());
+        //    }
+        //    else if (true)
+        //    {
+        //        return Content("This is a content result");
+        //    }
+        //    else
+        //    {
+        //        return View();
+        //    }
+        // ActionResult is the base class for all the result types in ASP.NET Core MVC.
+        //}
         #endregion
         #region IActionResult
-        //public IActionResult GetProducts()
-        //{
+        public IActionResult Index()
+        {
+            X();
+            return View();
+        }
+        [NonAction]//This attribute is used to exclude a public method from the controller.
+        public void X()
+        {
 
-        //}
+        }
         // IActionResult is the base interface for all the result types in ASP.NET Core MVC.
         #endregion
     }
-}
+}   
+
