@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Text.Json;
 using View_and_Razor.Models;
 
 namespace View_and_Razor.Controllers
@@ -20,15 +21,33 @@ namespace View_and_Razor.Controllers
             #region Data Transfer Controls
             #region ViewBag
             //The data which is sent to the view is stored in the ViewBag property of the Controller class. ViewBag is a dynamic property, so you can store any type of data in it.
-            ViewBag.Products = products;
+            //ViewBag.Products = products;
             #endregion
             #region ViewData
+            //ViewData transfers data which is kept in action methods to the view. ViewData is boxing the data(object) and we will unboxing it in the view.
+            ViewData["Products"] = products;
             #endregion
             #region TempData
+            //TempData is used to pass data from the current request to the subsequent request (means redirecting from one page to another).
+           string data= JsonSerializer.Serialize(products);
+
+            TempData["Products"] = products;
+            //TempData["X"] = 5;
+            //ViewBag.X = 10;
+            //ViewData["X"] = 15;
             #endregion
 
             #endregion
 
+            return RedirectToAction("Index2");
+        }
+        public IActionResult Index2()
+        {
+            //var v1 =ViewBag.X;
+            //var v2 = ViewData["X"];
+            //var v3 = TempData["X"];
+            var data = TempData["Products"].ToString();
+            JsonSerializer.Deserialize<List<Product>>(data);
             return View();
         }
     }
