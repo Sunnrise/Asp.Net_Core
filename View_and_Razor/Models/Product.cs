@@ -1,4 +1,4 @@
-﻿namespace View_and_Razor.Models
+﻿ namespace View_and_Razor.Models
 {
    
         public class Product
