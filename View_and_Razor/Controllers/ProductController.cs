@@ -15,11 +15,12 @@ namespace View_and_Razor.Controllers
                 new Product{ Id=3, ProductName= "C product", Quantity=30}
             };
             #region Model Based Sending Data
-            return View(products);
+            //return View(products);
             #endregion
             #region Data Transfer Controls
             #region ViewBag
-
+            //The data which is sent to the view is stored in the ViewBag property of the Controller class. ViewBag is a dynamic property, so you can store any type of data in it.
+            ViewBag.Products = products;
             #endregion
             #region ViewData
             #endregion
@@ -28,7 +29,7 @@ namespace View_and_Razor.Controllers
 
             #endregion
 
-           // return View();
+            return View();
         }
     }
 }

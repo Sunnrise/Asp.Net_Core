@@ -1,4 +1,4 @@
-﻿@model List<View_and_Razor.Models.Product>
+﻿@* @model List<View_and_Razor.Models.Product>
 
     <ul>
         @foreach (var product in Model)
@@ -6,3 +6,10 @@
             <li>@product.ProductName</li>
         }
     </ul>
+ *@
+<ul> @*We assign the type of the ViewBag.products because it will be assign in the runtime but it will be slower than that*@
+    @foreach (var product in ViewBag.products as List<View_and_Razor.Models.Product>)
+    {
+        <li>@product.ProductName</li>
+    }
+</ul>
