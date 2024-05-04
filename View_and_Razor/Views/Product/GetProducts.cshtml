@@ -2,6 +2,94 @@
 
 <h3>@Model.Product.ProductName</h3>
 <h3>@Model.User.Name</h3> *@
-@model (View_and_Razor.Models.Product p, View_and_Razor.Models.User u)
+@* @model (View_and_Razor.Models.Product p, View_and_Razor.Models.User u)
 <h3>@Model.p.ProductName</h3>
-<h3>@Model.u.Name</h3>
+<h3>@Model.u.Name</h3> *@
+
+
+@*What is the Razor?: in Asp.NET Core MVC architecture,  writing C# codes and HTML together with the same  .cshtml files and It provides Run that codes in the Server Side  *@
+@* @ operator is the RAZOR operator *@
+
+@* Create a variable with Razor*@
+@{
+    string name = "Alperen";
+}
+@* Read a variable with Razor*@
+@{
+    int number = 5;
+    Console.WriteLine(number);
+}
+
+@* Partial Scope with Razor *@
+@{
+    Console.WriteLine(name);
+}
+@*Using HTML in the Razor *@
+@{
+    <div></div>
+}
+@*Using <text> tag in the Razor *@
+@{
+    if (true)
+    {
+        <text>True</text>
+    }
+    else
+    {
+        <text>False</text>
+    }
+}
+@* One Row operations with Razor*@
+<h3>@(5+5)</h3>
+@* Calculus operations*@
+
+@* Ternary Operand*@
+<h3>@(33 % 5 == 3 ? "Yes" : "No")</h3>
+
+@* Conditions *@
+
+
+@if(number==5)
+{
+    <h3>Number is 5</h3>
+}
+else if(number==6)
+{
+    <h3>Number is 6</h3>
+}
+else
+{
+    <h3>Number is not 5 or 6</h3>
+}
+
+@*Loops *@
+
+@foreach(var item in Enumerable.Range(1, 10))
+{
+    <h3>@item</h3>
+})
+@for(int i=0;i<10;i++)
+{
+    <h3>@i</h3>
+}
+@try
+{
+    throw new Exception("Error");
+}
+catch(Exception ex)
+{
+    <h3>@ex.Message</h3>
+}
+@switch(number)
+{
+    case 5:
+        <h3>Number is 5</h3>
+        break;
+    case 6:
+        <h3>Number is 6</h3>
+        break;
+    default:
+        <h3>Number is not 5 or 6</h3>
+        break;
+}
+
