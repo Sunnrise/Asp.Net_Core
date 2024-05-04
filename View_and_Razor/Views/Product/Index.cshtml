@@ -1,0 +1,8 @@
+﻿@model List<View_and_Razor.Models.Product>
+
+    <ul>
+        @foreach (var product in Model)
+        {
+            <li>@product.ProductName</li>
+        }
+    </ul>
