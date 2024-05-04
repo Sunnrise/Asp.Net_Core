@@ -1,4 +1,7 @@
-﻿@model View_and_Razor.Models.ViewModels.UserProduct
+﻿@* @model View_and_Razor.Models.ViewModels.UserProduct
 
 <h3>@Model.Product.ProductName</h3>
-<h3>@Model.User.Name</h3>
+<h3>@Model.User.Name</h3> *@
+@model (View_and_Razor.Models.Product p, View_and_Razor.Models.User u)
+<h3>@Model.p.ProductName</h3>
+<h3>@Model.u.Name</h3>

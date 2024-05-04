@@ -65,11 +65,17 @@ namespace View_and_Razor.Controllers
                 Name = "Alperen",
                 LastName="Güneş"
             };
-            UserProduct userProduct = new UserProduct
-            {
-                User = user,
-                Product = product
-            };
+            ////We can sen multiple models to the view by creating a ViewModel class.
+            //UserProduct userProduct = new UserProduct
+            //{
+            //    User = user,
+            //    Product = product
+            //};
+
+            //return View(userProduct);
+
+            ////We can send multiple models to the view by using Tuple class.
+            var userProduct = (product, user);
 
             return View(userProduct);
         }
