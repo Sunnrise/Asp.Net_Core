@@ -25,8 +25,16 @@
 
 
 </form>  *@
-<cache>
+@* <cache>
     Cache :@DateTime.Now
 </cache>
 <br />
-@DateTime.Now
+@DateTime.Now *@
+
+@addTagHelper *,UrIHelpers_HtmlHelpers_TagHelpers
+<a href="mailto:alperengunes.eng@gmail.com"
+>Email</a>
+<br />
+<email a="abc" mail="alperengunes.eng@gmail.com" display="Alperen Güneş's mail address"></email>
+
+<send-mail-form></send-mail-form>
