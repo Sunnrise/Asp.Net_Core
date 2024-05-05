@@ -11,12 +11,12 @@
 <h1>GetProducts</h1>
 @Html.Partial("~/Views/Product/Partials/ListPartial.cshtml", new UrIHelpers_HtmlHelpers_TagHelpers.Models.Product()) *@
 @addTagHelper * ,Microsoft.AspNetCore.Mvc.TagHelpers
-@Html.BeginForm("Index","Prdoduct",FormMethod.Post); @*Server based form with html helper*@
+@* @Html.BeginForm("Index","Prdoduct",FormMethod.Post); 
 
 <form asp-action="Index" asp-controller="Product" method="post">
 
-    @Html.TextBox("txtName") @*HTML Helper*@
-    <input type="text" />@*View based form with tag helper*@
+    @Html.TextBox("txtName") 
+    <input type="text" />
 
     <select >
     <option value="value">text</option>
@@ -24,4 +24,9 @@
 
 
 
-</form> 
+</form>  *@
+<cache>
+    Cache :@DateTime.Now
+</cache>
+<br />
+@DateTime.Now
