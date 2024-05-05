@@ -7,13 +7,14 @@ namespace UrIHelpers_HtmlHelpers_TagHelpers.Controllers
     {
         public IActionResult GetProducts()
         {
-            ViewBag.Message = "Hello World";
-            User u = new User
-            {
-             LastName="Sun"
+            //ViewBag.Message = "Hello World";
+            //User u = new User
+            //{
+            // LastName="Sun"
 
-            };
-            return View(u);
+            //};
+            //return View(u);
+            return View();
         }
     }
 }

@@ -1,6 +1,12 @@
-﻿
+﻿@using UrIHelpers_HtmlHelpers_TagHelpers.Extensions
+
+@Html.TextBox("txtName",null,new{style= "background-color:green;color:white"})
+@Html.CustomTextBox("txtCustomName",null,"Your name")
+
+
+@* 
 @{
     ViewData["Title"] = "GetProducts";
 }
 <h1>GetProducts</h1>
-@Html.Partial("~/Views/Product/Partials/ListPartial.cshtml", new UrIHelpers_HtmlHelpers_TagHelpers.Models.Product())
+@Html.Partial("~/Views/Product/Partials/ListPartial.cshtml", new UrIHelpers_HtmlHelpers_TagHelpers.Models.Product()) *@

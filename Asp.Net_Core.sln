@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleProject", "SampleProj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View_and_Razor", "View_and_Razor\View_and_Razor.csproj", "{2A8EBCDC-9B0C-40A2-A046-C590C891A7AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrIHelpers_HtmlHelpers_TagHelpers", "UrIHelpers_HtmlHelpers_TagHelpers\UrIHelpers_HtmlHelpers_TagHelpers.csproj", "{F84DB321-336A-4A1C-8167-BA1F135EB8F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrIHelpers_HtmlHelpers_TagHelpers", "UrIHelpers_HtmlHelpers_TagHelpers\UrIHelpers_HtmlHelpers_TagHelpers.csproj", "{F84DB321-336A-4A1C-8167-BA1F135EB8F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
