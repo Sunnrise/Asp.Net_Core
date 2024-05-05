@@ -1,12 +1,27 @@
-﻿@using UrIHelpers_HtmlHelpers_TagHelpers.Extensions
+﻿@* @using UrIHelpers_HtmlHelpers_TagHelpers.Extensions
 
 @Html.TextBox("txtName",null,new{style= "background-color:green;color:white"})
 @Html.CustomTextBox("txtCustomName",null,"Your name")
 
 
-@* 
+ 
 @{
     ViewData["Title"] = "GetProducts";
 }
 <h1>GetProducts</h1>
 @Html.Partial("~/Views/Product/Partials/ListPartial.cshtml", new UrIHelpers_HtmlHelpers_TagHelpers.Models.Product()) *@
+@addTagHelper * ,Microsoft.AspNetCore.Mvc.TagHelpers
+@Html.BeginForm("Index","Prdoduct",FormMethod.Post); @*Server based form with html helper*@
+
+<form asp-action="Index" asp-controller="Product" method="post">
+
+    @Html.TextBox("txtName") @*HTML Helper*@
+    <input type="text" />@*View based form with tag helper*@
+
+    <select >
+    <option value="value">text</option>
+    </select>
+
+
+
+</form> 
