@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using UrIHelpers_HtmlHelpers_TagHelpers.Models;
 
 namespace UrIHelpers_HtmlHelpers_TagHelpers.Controllers
 {
@@ -7,7 +8,12 @@ namespace UrIHelpers_HtmlHelpers_TagHelpers.Controllers
         public IActionResult GetProducts()
         {
             ViewBag.Message = "Hello World";
-            return View();
+            User u = new User
+            {
+             LastName="Sun"
+
+            };
+            return View(u);
         }
     }
 }
