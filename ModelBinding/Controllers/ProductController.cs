@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Mvc;
+using ModelBinding.Models;
 
 namespace ModelBinding.Controllers
 {
@@ -14,7 +15,8 @@ namespace ModelBinding.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult CreateProduct(string txtProductName,string txtQuantity)
+        //public IActionResult CreateProduct(string txtProductName,string txtQuantity)
+        public IActionResult CreateProduct(Product product)
         {
             return View();
         }
