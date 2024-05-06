@@ -43,15 +43,20 @@ namespace ModelBinding.Controllers
         //[HttpPost]
         //public IActionResult CatchData(string txtValue1,string txtValue2,string txtValue3)
         //{
-          
+
 
         //    return View();
         //}
-        [HttpPost]
-        public IActionResult CatchData(Product product)// We can use IFormCollection, Product, or any other class as with all the properties that we want to bind
+        //[HttpPost]
+        //public IActionResult CatchData(Product product)// We can use IFormCollection, Product, or any other class as with all the properties that we want to bind
+        //{
+
+
+        //    return View();
+        //}
+        public IActionResult CatchData(string a, string b)
+        //https://localhost:44317/product/catchdata?a=5&b=a
         {
-
-
             return View();
         }
 
