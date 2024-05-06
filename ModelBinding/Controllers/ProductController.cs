@@ -30,12 +30,19 @@ namespace ModelBinding.Controllers
         {
             return View();
         }
+        //[HttpPost]
+        //public IActionResult CatchData(IFormCollection  datas)
+        //{
+        //    var value1 = datas["txtValue1"].ToString();
+        //    var value2 = datas["txtValue2"];
+        //    var value3 = datas["txtValue3"];
+
+        //    return View();
+        //}
         [HttpPost]
-        public IActionResult CatchData(IFormCollection  datas)
+        public IActionResult CatchData(string txtValue1,string txtValue2,string txtValue3)
         {
-            var value1 = datas["txtValue1"].ToString();
-            var value2 = datas["txtValue2"];
-            var value3 = datas["txtValue3"];
+          
 
             return View();
         }
