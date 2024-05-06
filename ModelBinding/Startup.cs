@@ -36,7 +36,7 @@ namespace ModelBinding
                 //    await context.response.writeasync("hello world!");
                 //});
                 endpoints.MapControllerRoute("CustomRoute","{controller=Home}/{action=Index}/{a}/{b}/{id}");
-                //endpoints.MapDefaultControllerRoute();//This is the default route for MVC
+                endpoints.MapDefaultControllerRoute();//This is the default route for MVC
 
 
             });

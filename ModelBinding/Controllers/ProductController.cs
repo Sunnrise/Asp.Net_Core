@@ -70,11 +70,11 @@ namespace ModelBinding.Controllers
             //var b = Request.Query["b"].ToString();
             return View();
         }
-        public class QueryData
-        {
-            public string a { get; set; }
-            public string b { get; set; }
-        }
+        //public class QueryData
+        //{
+        //    public string a { get; set; }
+        //    public string b { get; set; }
+        //}
 
     }
     //public class CatchData
@@ -83,4 +83,5 @@ namespace ModelBinding.Controllers
     //    public string txtValue2 { get; set; }
     //    public string txtValue3 { get; set; }
     //}
+    
 }
