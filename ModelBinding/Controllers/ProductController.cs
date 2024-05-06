@@ -59,13 +59,18 @@ namespace ModelBinding.Controllers
         //{
         //    return View();
         //}
-        public IActionResult CatchData()
+        public IActionResult CatchData(QueryData data)
         {
 
-            var queryString = Request.QueryString; // We can check the Endpoint which has been sent request for additional parameter from QueryString
-            var a =Request.Query["a"].ToString(); // We can get the value of the parameter from QueryString
-            var b = Request.Query["b"].ToString();
+            //var queryString = Request.QueryString; // We can check the Endpoint which has been sent request for additional parameter from QueryString
+            //var a =Request.Query["a"].ToString(); // We can get the value of the parameter from QueryString
+            //var b = Request.Query["b"].ToString();
             return View();
+        }
+        public class QueryData
+        {
+            public string a { get; set; }
+            public string b { get; set; }
         }
 
     }
