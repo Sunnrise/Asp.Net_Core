@@ -1,7 +1,7 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @model ModelBinding.Models.Product
 
-
+@* 
 <form asp-action= "CreateProduct" asp-controller="Product" method="post">
     <input type="text" asp-for="ProductName" placeholder="ProductName" />
     <br />
@@ -9,3 +9,11 @@
     <br />
     <button>Add Product</button>
 </form>
+ *@
+ <form asp-action="CatchData" asp-controller="Product" method="post">
+     <input type="text" name="txtValue1"/><br/>
+     <input type="text" name="txtValue2" /><br/>
+     <input type="text" name="txtValue3" /><br />
+     <button>Send</button>
+ 
+ </form>
