@@ -3,9 +3,11 @@
 
 
 <form asp-action= "CreateProduct" asp-controller="Product" method="post">
-    <input type="text" asp-for="ProductName" placeholder="ProductName" />
+    @* <input type="text" asp-for="ProductName" placeholder="ProductName" /> *@
     <br />
-    <input type="number" asp-for="Quantity" placeholder="Quantity" />
+    @Html.TextBoxFor(x=>x.ProductName, new { placeholder = "ProductName" }))
+   @*  <input type="number" asp-for="Quantity" placeholder="Quantity" /> *@
     <br />
+    @Html.TextBoxFor(x=>x.Quantity, new { placeholder = "Quantity",type="number" }))
     <button>Add Product</button>
 </form>
