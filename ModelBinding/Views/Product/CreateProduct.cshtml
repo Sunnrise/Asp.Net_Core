@@ -11,9 +11,8 @@
 </form>
  *@
  <form asp-action="CatchData" asp-controller="Product" method="post">
-     <input type="text" name="txtValue1"/><br/>
-     <input type="text" name="txtValue2" /><br/>
-     <input type="text" name="txtValue3" /><br />
+     <input asp-for="ProductName" type="text"/><br/>
+     <input asp-for="Quantity" type="text"/><br/>
      <button>Send</button>
  
  </form>
