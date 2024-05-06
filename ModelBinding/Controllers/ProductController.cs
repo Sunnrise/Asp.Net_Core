@@ -54,9 +54,17 @@ namespace ModelBinding.Controllers
 
         //    return View();
         //}
-        public IActionResult CatchData(string a, string b)
-        //https://localhost:44317/product/catchdata?a=5&b=a
+        //public IActionResult CatchData(string a, string b)
+        ////https://localhost:44317/product/catchdata?a=5&b=a
+        //{
+        //    return View();
+        //}
+        public IActionResult CatchData()
         {
+
+            var queryString = Request.QueryString; // We can check the Endpoint which has been sent request for additional parameter from QueryString
+            var a =Request.Query["a"].ToString(); // We can get the value of the parameter from QueryString
+            var b = Request.Query["b"].ToString();
             return View();
         }
 
