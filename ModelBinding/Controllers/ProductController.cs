@@ -39,13 +39,27 @@ namespace ModelBinding.Controllers
 
         //    return View();
         //}
-        [HttpPost]
-        public IActionResult CatchData(string txtValue1,string txtValue2,string txtValue3)
-        {
+
+        //[HttpPost]
+        //public IActionResult CatchData(string txtValue1,string txtValue2,string txtValue3)
+        //{
           
+
+        //    return View();
+        //}
+        [HttpPost]
+        public IActionResult CatchData(CatchData catchData)
+        {
+
 
             return View();
         }
 
+    }
+    public class CatchData
+    {
+        public string txtValue1 { get; set; }
+        public string txtValue2 { get; set; }
+        public string txtValue3 { get; set; }
     }
 }
