@@ -12,7 +12,12 @@ namespace ModelBinding.Controllers
         }
         public IActionResult CreateProduct()
         {
-            return View();
+            var product = new Product()
+            {
+                ProductName = "Z Product",
+                Quantity = 22 
+            };
+            return View(product);
         }
         [HttpPost]
         //public IActionResult CreateProduct(string txtProductName,string txtQuantity)
