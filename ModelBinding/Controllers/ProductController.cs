@@ -5,6 +5,12 @@ using ModelBinding.Models;
 
 namespace ModelBinding.Controllers
 {
+    public class AjaxData
+    {
+        public string A { get; set; }
+        public string B { get; set; }
+
+    }
     public class ProductController : Controller
     {
         public IActionResult GetProducts()
@@ -69,15 +75,20 @@ namespace ModelBinding.Controllers
         //    //var a =Request.Query["a"].ToString(); // We can get the value of the parameter from QueryString
         //    //var b = Request.Query["b"].ToString();
         //    return View();
-        public IActionResult CatchData()
+
+        [HttpPost]
+        public IActionResult CatchData(AjaxData ajaxData)
         {
 
-            var headers = Request.Headers;// We can check the headers of the request that has been sent to the endpoint.
+            //var headers = Request.Headers;// We can check the headers of the request that has been sent to the endpoint.
 
 
 
 
             return View();
+          
+        }
+        
         }
         //public class QueryData
         //{
@@ -86,11 +97,10 @@ namespace ModelBinding.Controllers
         //}
 
     }
-    //public class CatchData
-    //{
-    //    public string txtValue1 { get; set; }
-    //    public string txtValue2 { get; set; }
-    //    public string txtValue3 { get; set; }
-    //}
-    
-}
+//public class CatchData
+//{
+//    public string txtValue1 { get; set; }
+//    public string txtValue2 { get; set; }
+//    public string txtValue3 { get; set; }
+//}
+

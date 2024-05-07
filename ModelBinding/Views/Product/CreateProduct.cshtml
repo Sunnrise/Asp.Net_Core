@@ -1,5 +1,5 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@model ModelBinding.Models.Product
+@*  @model ModelBinding.Models.Product *@
 
 @* 
 <form asp-action= "CreateProduct" asp-controller="Product" method="post">
@@ -10,11 +10,20 @@
     <button>Add Product</button>
 </form>
  *@
- <form asp-action="CatchData" asp-controller="Product" method="post">
+ @* <form asp-action="CatchData" asp-controller="Product" method="post">
      <input asp-for="ProductName" type="text"/><br/>
      <input asp-for="Quantity" type="text"/><br/>
      <button>Send</button>
  
  </form>
- <a asp-action="Index" asp-controller="Home" asp-route-a="Alperen" asp-route-b="Gunes" asp-route-id="123" asp-route-x="asdksdsgjslkh">content</a>
-@*https://localhost:44317/Home/Index/Alperen/Gunes/123?x=asdksdsgjslkh*@
+ <a asp-action="Index" asp-controller="Home" asp-route-a="Alperen" asp-route-b="Gunes" asp-route-id="123" asp-route-x="asdksdsgjslkh">content</a>*@
+@*https://localhost:44317/Home/Index/Alperen/Gunes/123?x=asdksdsgjslkh *@
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<button id="btnSend">Send</button>
+<script> 
+    $("#btnSend").click(() => {
+        $.post("https://localhost:5001/product/catchdata", { a: "a data", b: "b data" });
+    });
+</script>
+
