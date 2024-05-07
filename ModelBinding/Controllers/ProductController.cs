@@ -59,15 +59,24 @@ namespace ModelBinding.Controllers
         //{
         //    return View();
         //}
-        
-        public IActionResult CatchData(string id)
+
+        //public IActionResult CatchData(string id)
+        //{
+        //    var values = Request.RouteValues;
+
+
+        //    //var queryString = Request.QueryString; // We can check the Endpoint which has been sent request for additional parameter from QueryString
+        //    //var a =Request.Query["a"].ToString(); // We can get the value of the parameter from QueryString
+        //    //var b = Request.Query["b"].ToString();
+        //    return View();
+        public IActionResult CatchData()
         {
-            var values = Request.RouteValues;
+
+            var headers = Request.Headers;// We can check the headers of the request that has been sent to the endpoint.
 
 
-            //var queryString = Request.QueryString; // We can check the Endpoint which has been sent request for additional parameter from QueryString
-            //var a =Request.Query["a"].ToString(); // We can get the value of the parameter from QueryString
-            //var b = Request.Query["b"].ToString();
+
+
             return View();
         }
         //public class QueryData
