@@ -36,6 +36,12 @@ namespace ModelBinding.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult CreateProduct([Bind(Prefix = "item1")] Product product, [Bind(Prefix = "item2")] User user)
+        {
+            var tuple= (new Product(), new User());
+            return View(tuple);
+        }
         //[HttpPost]
         //public IActionResult CatchData(IFormCollection  datas)
         //{
@@ -76,20 +82,20 @@ namespace ModelBinding.Controllers
         //    //var b = Request.Query["b"].ToString();
         //    return View();
 
-        [HttpPost]
-        public IActionResult CatchData(AjaxData ajaxData)
-        {
+        //[HttpPost]
+        //public IActionResult CatchData(AjaxData ajaxData)
+        //{
 
-            //var headers = Request.Headers;// We can check the headers of the request that has been sent to the endpoint.
-
-
+        //    //var headers = Request.Headers;// We can check the headers of the request that has been sent to the endpoint.
 
 
-            return View();
-          
-        }
-        
-        }
+
+
+        //    return View();
+
+        //}
+
+    }
         //public class QueryData
         //{
         //    public string a { get; set; }

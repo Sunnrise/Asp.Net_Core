@@ -19,11 +19,19 @@
  <a asp-action="Index" asp-controller="Home" asp-route-a="Alperen" asp-route-b="Gunes" asp-route-id="123" asp-route-x="asdksdsgjslkh">content</a>*@
 @*https://localhost:44317/Home/Index/Alperen/Gunes/123?x=asdksdsgjslkh *@
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+@* <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <button id="btnSend">Send</button>
 <script> 
     $("#btnSend").click(() => {
         $.post("https://localhost:5001/product/catchdata", { a: "a data", b: "b data" });
     });
-</script>
+</script> *@
+@model (ModelBinding.Models.Product product, ModelBinding.Models.User user)
+
+<form asp-action="CreateProduct" asp-controller="Product" method="post">
+    <input type="text" asp-for="product.ProductName" placeholder="ProductName" /><br />
+    <input type="text" asp-for="user.Name" placeholder="Name" /><br />
+    <button>Send</button>
+</form>
+
 
