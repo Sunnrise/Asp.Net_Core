@@ -9,7 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View_and_Razor", "View_and_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UrIHelpers_HtmlHelpers_TagHelpers", "UrIHelpers_HtmlHelpers_TagHelpers\UrIHelpers_HtmlHelpers_TagHelpers.csproj", "{F84DB321-336A-4A1C-8167-BA1F135EB8F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelBinding", "ModelBinding\ModelBinding.csproj", "{C1620498-7847-4078-BAB7-9EC4743C29EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModelBinding", "ModelBinding\ModelBinding.csproj", "{C1620498-7847-4078-BAB7-9EC4743C29EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation", "Validation\Validation.csproj", "{946DF912-3C0A-4127-9D61-28BC92971FF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C1620498-7847-4078-BAB7-9EC4743C29EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1620498-7847-4078-BAB7-9EC4743C29EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1620498-7847-4078-BAB7-9EC4743C29EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{946DF912-3C0A-4127-9D61-28BC92971FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{946DF912-3C0A-4127-9D61-28BC92971FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{946DF912-3C0A-4127-9D61-28BC92971FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{946DF912-3C0A-4127-9D61-28BC92971FF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
