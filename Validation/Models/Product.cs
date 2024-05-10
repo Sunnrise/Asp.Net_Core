@@ -1,10 +1,16 @@
-﻿namespace Validation.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Validation.Models
 {
     
     public class Product
     {
-
+        [Required(ErrorMessage="Please type a product name")]
+        [StringLength(50, ErrorMessage = "Product name must be less than 50 characters")]
         public string ProductName { get; set; }
         public int Quantity { get; set; }
+
+        [EmailAddress(ErrorMessage ="Please type a correct e-mail")]
+        public string Email { get; set; }
     }
 }
