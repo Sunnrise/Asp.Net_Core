@@ -1,7 +1,10 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @model Validation.Models.Product
 
+<div asp-validation-summary="All">
 
+
+</div>
 <form asp-action="CreateProduct" asp-controller="Product" method="post">
     <input type="text" asp-for="ProductName" placeholder="Product Name" />
     <span asp-validation-for="ProductName"></span> 
