@@ -6,7 +6,7 @@ namespace Layout.ViewComponents
 {
     public class TableViewComponent: ViewComponent
     {
-        public IViewComponentResult Invoke()
+        public IViewComponentResult Invoke(int id)
         {
             List<Employee> datas = new List<Employee>{
                 new Employee{Name="Alperen",Surname="GUNES"},
