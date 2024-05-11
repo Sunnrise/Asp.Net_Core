@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace Layout.Controllers
 {
@@ -6,6 +7,8 @@ namespace Layout.Controllers
     {
         public IActionResult Index()
         {
+           
+
             return View();
         }
         public IActionResult Page1()

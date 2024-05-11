@@ -1,0 +1,24 @@
+﻿@model List<Employee>
+<section>
+    <h2>Employee Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Surname</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var employee in Model)
+            {
+                <tr>
+                    <td>@employee.Name</td>
+                    <td>@employee.Surname</td>
+                    
+                </tr>
+            }
+            <!-- Daha fazla satır eklenebilir -->;
+        </tbody>
+    </table>
+</section>

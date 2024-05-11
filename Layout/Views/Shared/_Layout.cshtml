@@ -65,6 +65,9 @@
     <section>
         @RenderBody()
     </section>
+    <!-- Tablo HTML'i -->
+    @await Component.InvokeAsync("Table");
+
     <section id="additional-content">
         @RenderSection("AdditionalContent", required: false)
     </section>
