@@ -1,8 +1,11 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @model Validation.Models.Product
+<script src="~/wwwroot/jquery/jquery.min.js"></script>
+<script src="~/wwwroot/jquery-validate/jquery.validate.min.js"></script>
+<script src="~/wwwroot/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
 
 <div asp-validation-summary="All">
-
 
 </div>
 <form asp-action="CreateProduct" asp-controller="Product" method="post">
