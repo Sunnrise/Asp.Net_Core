@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace Layout.ViewComponents
 {
+    [NonViewComponent]
     public class TableViewComponent: ViewComponent
     {
         public IViewComponentResult Invoke(int id)
