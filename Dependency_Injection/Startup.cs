@@ -29,8 +29,8 @@ namespace Dependency_Injection
             //services.Add(new ServiceDescriptor(typeof(TextLog), new TextLog()));
 
             
-            services.AddSingleton<ConsoleLog>();// ConsoleLog's consturctor has not a parameter so we can use this method
-            //services.AddSingleton<ConsoleLog>(p=> new ConsoleLog(5));// ConsoleLog's consturctor has a parameter so we can use this method
+            //services.AddSingleton<ConsoleLog>();// ConsoleLog's consturctor has not a parameter so we can use this method
+            services.AddSingleton<ConsoleLog>(p=> new ConsoleLog(5));// ConsoleLog's consturctor has a parameter so we can use this method
             services.AddControllersWithViews();
 
         }
