@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace RouteStructure.Controllers
 {
-    [Route("[controller]/[action]")]
+    //[Route("main/[action]")]
+    [Route("main")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -18,13 +19,13 @@ namespace RouteStructure.Controllers
         {
             _logger = logger;
         }
-
+        [Route("[action]")]
         public IActionResult Index(int id, string x, int y)
-        {
+         {
             return View();
         }
-
-        public IActionResult Privacy()
+        [Route("action1/{id?}")]
+        public IActionResult Privacy(int? id)
         {
             return View();
         }
