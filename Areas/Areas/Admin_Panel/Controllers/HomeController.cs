@@ -7,7 +7,10 @@ namespace Areas.Areas.Admin_Panel.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+
+            TempData["Message"] = "Hello from Admin Panel";
+
+            return RedirectToAction("Index", "Home", new {area= "Invoice_Panel" });
         }
     }
 }

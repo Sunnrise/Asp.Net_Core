@@ -7,6 +7,7 @@ namespace Areas.Areas.Invoice_Panel.Controllers
     {
         public IActionResult Index()
         {
+            var message = TempData["Message"];
             return View();
         }
     }
