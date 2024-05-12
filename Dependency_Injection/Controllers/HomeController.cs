@@ -1,5 +1,6 @@
 ﻿using Dependency_Injection.Models;
 using Dependency_Injection.Services;
+using Dependency_Injection.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,18 +13,17 @@ namespace Dependency_Injection.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        readonly ILog _log;
+
+        public HomeController(ILog log)
         {
-            _logger = logger;
+            _log = log;
         }
 
         public IActionResult Index()
         {
-            ConsoleLog consoleLog = new ConsoleLog();
-            consoleLog.Log();
-
+            _log.Log();
             return View();
         }
 

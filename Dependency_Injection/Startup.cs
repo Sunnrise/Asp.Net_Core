@@ -1,4 +1,5 @@
 using Dependency_Injection.Services;
+using Dependency_Injection.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,14 +31,17 @@ namespace Dependency_Injection
 
             
             //services.AddSingleton<ConsoleLog>();// ConsoleLog's consturctor has not a parameter so we can use this method
-            services.AddSingleton<ConsoleLog>(p=> new ConsoleLog(5));// ConsoleLog's consturctor has a parameter so we can use this method
-            services.AddSingleton<TextLog>();
+            //services.AddSingleton<ConsoleLog>(p=> new ConsoleLog(5));// ConsoleLog's consturctor has a parameter so we can use this method
+            //services.AddSingleton<TextLog>();
 
-            services.AddScoped<ConsoleLog>(p => new ConsoleLog(5));
-            services.AddScoped<TextLog>();
+            //services.AddScoped<ConsoleLog>(p => new ConsoleLog(5));
+            //services.AddScoped<TextLog>();
 
-            services.AddTransient<ConsoleLog>(p => new ConsoleLog(5));
-            services.AddTransient<TextLog>();
+            //services.AddTransient<ConsoleLog>(p => new ConsoleLog(5));
+            //services.AddTransient<TextLog>();
+
+            services.AddScoped<ILog>(p => new ConsoleLog(5));
+            //services.AddScoped<ILog, TextLog>();
 
 
             services.AddControllersWithViews();
