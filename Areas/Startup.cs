@@ -48,6 +48,26 @@ namespace Areas
 
             app.UseEndpoints(endpoints =>
             {
+
+
+                endpoints.MapAreaControllerRoute(
+                    name: "admin",
+                    areaName: "Admin_Panel",
+                    pattern: "admin/{controller=Home}/{action=Index}"
+                    );
+
+                endpoints.MapAreaControllerRoute(
+                    name:"invoice",
+                    areaName: "Invoice_Panel",
+                    pattern: "invoice/{controller=Home}/{action=Index}"
+                    );
+
+
+                //endpoints.MapControllerRoute(
+                //    name: "areaDefault",
+                //    pattern: "{area:exists}/{controller=Home}/{action=I ndex}/{id?}"
+                //    );
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

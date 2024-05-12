@@ -5,15 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\" />
-    <Folder Include="Areas\Admin_Panel\Controllers\" />
     <Folder Include="Areas\Admin_Panel\Data\" />
     <Folder Include="Areas\Admin_Panel\Models\" />
     <Folder Include="Areas\Admin_Panel\Views\" />
-    <Folder Include="Areas\Invoice_Panel\Controllers\" />
     <Folder Include="Areas\Invoice_Panel\Data\" />
     <Folder Include="Areas\Invoice_Panel\Models\" />
-    <Folder Include="Areas\Invoice_Panel\Views\" />
   </ItemGroup>
 
   <ItemGroup>
