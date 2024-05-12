@@ -36,5 +36,11 @@ namespace ViewModel_DTO.Controllers
 
             return View(employees);
         }
+        public IActionResult Get() 
+        {
+            var @object= (new Employee(), new Product(), new Customer());
+
+            return View();
+        }
     }
 }
