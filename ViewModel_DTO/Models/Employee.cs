@@ -1,5 +1,6 @@
 ﻿namespace ViewModel_DTO.Models
 {
+    //Entity Model
     public class Employee
     {
         public int Id { get; set; }
