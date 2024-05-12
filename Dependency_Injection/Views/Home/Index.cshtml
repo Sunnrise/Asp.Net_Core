@@ -1,4 +1,10 @@
-﻿@{
+﻿@inject Dependency_Injection.Services.Interfaces.ILog log
+
+@{
+    log.Log();
+}
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
