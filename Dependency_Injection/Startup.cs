@@ -36,6 +36,9 @@ namespace Dependency_Injection
             services.AddScoped<ConsoleLog>(p => new ConsoleLog(5));
             services.AddScoped<TextLog>();
 
+            services.AddTransient<ConsoleLog>(p => new ConsoleLog(5));
+            services.AddTransient<TextLog>();
+
 
             services.AddControllersWithViews();
 
