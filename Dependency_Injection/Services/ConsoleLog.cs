@@ -2,6 +2,7 @@
 {
     public class ConsoleLog
     {
+       // public ConsoleLog(int a) { }
         public void Log()
         {
             
