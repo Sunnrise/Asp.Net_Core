@@ -13,22 +13,42 @@ namespace ViewModel_DTO.Models
         public bool MaritalStatus { get; set; }
 
         #region Implicit:means that you can convert an object of one type to another type without explicitly specifying it.
-        public static implicit operator EmployeeCreateViewModel(Employee model)
+        //public static implicit operator EmployeeCreateViewModel(Employee model)
+        //{
+        //    return new EmployeeCreateViewModel
+        //    {
+        //        Name = model.Name,
+        //        Surname = model.Surname,
+
+        //    };
+        //}
+        //public static implicit operator Employee(EmployeeCreateViewModel model)
+        //{
+        //    return new Employee
+        //    {
+        //        Name = model.Name,
+        //        Surname = model.Surname,
+
+        //    };
+        //}
+        #endregion
+        #region Explicit:means that you can convert an object of one type to another type by explicitly specifying it.
+        public static explicit operator EmployeeCreateViewModel(Employee model)
         {
             return new EmployeeCreateViewModel
             {
                 Name = model.Name,
                 Surname = model.Surname,
-                
+
             };
         }
-        public static implicit operator Employee(EmployeeCreateViewModel model)
+        public static explicit operator Employee(EmployeeCreateViewModel model)
         {
             return new Employee
             {
                 Name = model.Name,
                 Surname = model.Surname,
-            
+
             };
         }
         #endregion

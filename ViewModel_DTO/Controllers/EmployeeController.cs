@@ -23,11 +23,12 @@ namespace ViewModel_DTO.Controllers
             //};
             #endregion
             #region Implicit
-            Employee employee = employeeCreateViewModel;
-            EmployeeCreateViewModel vm  = employee;
+            //Employee employee = employeeCreateViewModel;
+            //EmployeeCreateViewModel vm  = employee;
             #endregion
             #region Explicit
-
+            Employee employee = (Employee)employeeCreateViewModel;// We have to force the casting operation
+            EmployeeCreateViewModel vm = (EmployeeCreateViewModel)employee;
             #endregion
 
 
