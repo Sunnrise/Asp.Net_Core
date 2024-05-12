@@ -15,11 +15,22 @@ namespace ViewModel_DTO.Controllers
         [HttpPost]
         public IActionResult Index(EmployeeCreateViewModel employeeCreateViewModel)
         {
-            Employee employee = new Employee
-            {
-                Name = employeeCreateViewModel.Name,
-                Surname = employeeCreateViewModel.Surname
-            };
+            #region Manual
+            //Employee employee = new Employee
+            //{
+            //    Name = employeeCreateViewModel.Name,
+            //    Surname = employeeCreateViewModel.Surname
+            //};
+            #endregion
+            #region Implicit
+            Employee employee = employeeCreateViewModel;
+            EmployeeCreateViewModel vm  = employee;
+            #endregion
+            #region Explicit
+
+            #endregion
+
+
 
             return View();
         }
