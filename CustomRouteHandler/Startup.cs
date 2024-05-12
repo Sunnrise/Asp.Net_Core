@@ -1,3 +1,4 @@
+using CustomRouteHandler.Handlers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -48,12 +49,13 @@ namespace CustomRouteHandler
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.Map("example-route", async c =>
-                {
-                    //if a request achieve the  https://localhost:5001/example-route endpoint, the response is given by this lambda function not by the controller
+                //endpoints.Map("example-route", async c =>
+                //{
+                //    //if a request achieve the  https://localhost:5001/example-route endpoint, the response is given by this lambda function not by the controller
 
 
-                });
+                //});
+                endpoints.Map("example-route", new ExampleHandler().Handler());
 
                 endpoints.MapControllerRoute(
                     name: "default",
