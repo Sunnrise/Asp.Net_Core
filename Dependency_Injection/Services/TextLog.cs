@@ -1,6 +1,6 @@
 ﻿namespace Dependency_Injection.Services
 {
-    public class TestLog
+    public class TextLog
     {
         public void Log()
         {
