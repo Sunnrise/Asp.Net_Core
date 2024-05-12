@@ -18,7 +18,7 @@ namespace RouteStructure.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index(string id, string x, string y)
+        public IActionResult Index(int id, string x, int y)
         {
             return View();
         }
