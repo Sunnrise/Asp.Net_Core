@@ -48,8 +48,9 @@ namespace RouteStructure
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute("Default3", "homepage", new { controller = "Home", action = "Index" });
-                endpoints.MapControllerRoute("Default2", "{controller=Employee}/{action=Index}");
+                endpoints.MapControllerRoute("Default4", "{controller=Home}/{action=Index}/{id:int?}/{x?}/{y:int?}");
+                //endpoints.MapControllerRoute("Default3", "homepage", new { controller = "Home", action = "Index" });
+                //endpoints.MapControllerRoute("Default2", "{controller=Employee}/{action=Index}");
                 //endpoints.MapControllerRoute("Default1", "{action}/alperen/{controller}"); // This is the custom route we have to consider the paramters in the URL and their order
                 //endpoints.MapControllerRoute("Default","{action}/{controller}");
                 endpoints.MapDefaultControllerRoute();
@@ -58,3 +59,4 @@ namespace RouteStructure
         }
     }
 }
+ 
