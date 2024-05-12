@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using RouteStructure.Constraints;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +25,9 @@ namespace RouteStructure
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<RouteOptions>(options => options.ConstraintMap.Add("custom", typeof(CustomConstraint)));
             services.AddControllersWithViews();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,7 +52,7 @@ namespace RouteStructure
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute("Default4", "{controller=Home}/{action=Index}/{id:int?}/{x:length(12)?}/{y:int?}");
+                endpoints.MapControllerRoute("Default4", "{controller=Home}/{action=Index}/{id:custom}/{x:alpha:length(12)?}/{y:int?}");
                 //endpoints.MapControllerRoute("Default3", "homepage", new { controller = "Home", action = "Index" });
                 //endpoints.MapControllerRoute("Default2", "{controller=Employee}/{action=Index}");
                 //endpoints.MapControllerRoute("Default1", "{action}/alperen/{controller}"); // This is the custom route we have to consider the paramters in the URL and their order
