@@ -8,12 +8,19 @@ namespace ViewModel_DTO.Controllers
 {
     public class EmployeeController : Controller
     {
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
+        public IActionResult Index()
+        {
+            return View();
+        }
+        [HttpPost]
         public IActionResult Index(EmployeeCreateViewModel employeeCreateViewModel)
         {
+            Employee employee = new Employee
+            {
+                Name = employeeCreateViewModel.Name,
+                Surname = employeeCreateViewModel.Surname
+            };
+
             return View();
         }
         public IActionResult MakeList() 
