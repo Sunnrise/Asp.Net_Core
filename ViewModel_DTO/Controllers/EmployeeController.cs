@@ -1,0 +1,40 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
+using ViewModel_DTO.Models;
+using ViewModel_DTO.Models.ViewModels;
+
+namespace ViewModel_DTO.Controllers
+{
+    public class EmployeeController : Controller
+    {
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
+        public IActionResult Index(EmployeeCreateViewModel employeeCreateViewModel)
+        {
+            return View();
+        }
+        public IActionResult MakeList() 
+        {
+            List<EmployeeListViewModel> employees = new List<Employee>() { 
+                new Employee { Name = "John", Surname = "Doe" }, 
+                new Employee { Name = "Jane", Surname = "Doe" }, 
+                new Employee { Name = "John", Surname = "Smith" }, 
+                new Employee { Name = "Jane", Surname = "Smith" }, 
+                new Employee { Name = "John", Surname = "Johnson" }, 
+                new Employee { Name = "Jane", Surname = "Johnson" } 
+            }.Select(p=>new EmployeeListViewModel
+            {
+                Name = p.Name,
+                Surname = p.Surname,
+                Position = p.Position
+                }).ToList();
+
+            
+
+            return View(employees);
+        }
+    }
+}

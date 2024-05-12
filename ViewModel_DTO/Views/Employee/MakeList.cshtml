@@ -1,0 +1,12 @@
+﻿@model List<EmployeeListViewModel>
+
+<ul>
+    @foreach (var employee in Model)
+    {
+        <li>
+            @employee.Name @employee.Surname @employee.Position
+        </li>
+      
+
+    }
+</ul>

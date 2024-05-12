@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dependency_Injection", "Dep
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Areas", "Areas\Areas.csproj", "{488C070A-746F-4454-ABB5-93C5E95C09BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModel_DTO", "ViewModel_DTO\ViewModel_DTO.csproj", "{C7CE43D3-DAC7-402D-B0FC-E5B1D6B5A8CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{488C070A-746F-4454-ABB5-93C5E95C09BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{488C070A-746F-4454-ABB5-93C5E95C09BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{488C070A-746F-4454-ABB5-93C5E95C09BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7CE43D3-DAC7-402D-B0FC-E5B1D6B5A8CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7CE43D3-DAC7-402D-B0FC-E5B1D6B5A8CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7CE43D3-DAC7-402D-B0FC-E5B1D6B5A8CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7CE43D3-DAC7-402D-B0FC-E5B1D6B5A8CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
