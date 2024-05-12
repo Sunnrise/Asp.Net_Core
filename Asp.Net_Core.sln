@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Layout", "Layout\Layout.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RouteStructure", "RouteStructure\RouteStructure.csproj", "{161842B4-3F80-4AD8-B426-B29BA137ED6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomRouteHandler", "CustomRouteHandler\CustomRouteHandler.csproj", "{996F2616-C5C6-44B6-BA98-A511CFA5CDA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{161842B4-3F80-4AD8-B426-B29BA137ED6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{161842B4-3F80-4AD8-B426-B29BA137ED6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{161842B4-3F80-4AD8-B426-B29BA137ED6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{996F2616-C5C6-44B6-BA98-A511CFA5CDA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{996F2616-C5C6-44B6-BA98-A511CFA5CDA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{996F2616-C5C6-44B6-BA98-A511CFA5CDA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{996F2616-C5C6-44B6-BA98-A511CFA5CDA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
