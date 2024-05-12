@@ -14,16 +14,17 @@ namespace Dependency_Injection.Controllers
     public class HomeController : Controller
     {
 
-        readonly ILog _log;
+        //readonly ILog _log;
 
-        public HomeController(ILog log)
-        {
-            _log = log;
-        }
+        //public HomeController(ILog log)
+        //{
+        //    _log = log;
+        //}
 
-        public IActionResult Index()
+        public IActionResult Index([FromServices]ILog log)
         {
-            _log.Log();
+            //_log.Log();
+            log.Log();
             return View();
         }
 
