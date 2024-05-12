@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Middleware.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,20 +47,22 @@ namespace Middleware
 
             app.UseHttpsRedirection();
 
-            app.Use(async (context, next) => 
-            {
-                Console.WriteLine("Start Use middleware!");
-                await next.Invoke();
-                Console.WriteLine("End Use middleware!");
+            //app.Use(async (context, next) => 
+            //{
+            //    Console.WriteLine("Start Use middleware!");
+            //    await next.Invoke();
+            //    Console.WriteLine("End Use middleware!");
 
-            });
+            //});
 
-            app.Run(async context =>
-            {
-                Console.WriteLine("Run middleware!");
-            });
+            //app.Run(async context =>
+            //{
+            //    Console.WriteLine("Run middleware!");
+            //});
 
             app.UseRouting();
+
+            app.UseHello();
 
             app.UseAuthorization();
 
