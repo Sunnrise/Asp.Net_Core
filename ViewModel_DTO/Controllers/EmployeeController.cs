@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
+using ViewModel_DTO.Business;
 using ViewModel_DTO.Models;
 using ViewModel_DTO.Models.ViewModels;
 
@@ -30,6 +31,13 @@ namespace ViewModel_DTO.Controllers
             Employee employee = (Employee)employeeCreateViewModel;// We have to force the casting operation
             EmployeeCreateViewModel vm = (EmployeeCreateViewModel)employee;
             #endregion
+            #region Reflection
+
+            Employee e =TypeConversion.Conversion<EmployeeCreateViewModel, Employee>(employeeCreateViewModel);
+            EmployeeListViewModel vm = TypeConversion.Conversion<Employee, EmployeeListViewModel>(new Employee { Name="Alperen", Surname="Gunes"});
+
+            #endregion
+
 
 
 
