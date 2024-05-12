@@ -55,6 +55,9 @@ namespace CustomRouteHandler
 
 
                 //});
+                endpoints.Map("image/{imageName}", new ImageHandler().Handler(env.WebRootPath));
+
+
                 endpoints.Map("example-route", new ExampleHandler().Handler());
 
                 endpoints.MapControllerRoute(
