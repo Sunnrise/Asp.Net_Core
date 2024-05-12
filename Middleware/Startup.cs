@@ -46,6 +46,14 @@ namespace Middleware
 
             app.UseHttpsRedirection();
 
+            app.Use(async (context, next) => 
+            {
+                Console.WriteLine("Start Use middleware!");
+                await next.Invoke();
+                Console.WriteLine("End Use middleware!");
+
+            });
+
             app.Run(async context =>
             {
                 Console.WriteLine("Run middleware!");
