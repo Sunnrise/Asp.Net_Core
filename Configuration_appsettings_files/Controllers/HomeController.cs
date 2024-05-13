@@ -31,6 +31,10 @@ namespace Configuration_appsettings_files.Controllers
             var v4 = _configuration["Person:Surname"];
             var v5 = _configuration["Logging:LogLevel:Microsoft.Hosting.Lifetime"];
 
+            var v6 =_configuration.GetSection("Person");
+            var v7 = _configuration.GetSection("Person:Name");
+          
+
             return View();
         }
 
