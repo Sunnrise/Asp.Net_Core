@@ -33,6 +33,8 @@ namespace Configuration_appsettings_files.Controllers
 
             var v6 =_configuration.GetSection("Person");
             var v7 = _configuration.GetSection("Person:Name");
+
+            var v8 =_configuration.GetSection("Person").Get(typeof(Person));
           
 
             return View();
