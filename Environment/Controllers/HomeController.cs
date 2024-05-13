@@ -1,5 +1,7 @@
 ﻿using Environment.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -11,15 +13,26 @@ namespace Environment.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        readonly IWebHostEnvironment _webHostEnvironment;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IWebHostEnvironment webHostEnvironment)
         {
-            _logger = logger;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         public IActionResult Index()
         {
+            if(_webHostEnvironment.IsDevelopment())
+                ViewBag.Environment = "Development";
+            else if (_webHostEnvironment.IsProduction())
+                ViewBag.Environment = "Production";
+            else if (_webHostEnvironment.IsStaging())
+                ViewBag.Environment = "Staging";
+            else
+                ViewBag.Environment = "Custom environment";
+            
+            
+
             return View();
         }
 

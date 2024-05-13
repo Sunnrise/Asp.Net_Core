@@ -31,7 +31,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration_appsettings_f
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptionsPattern_with_DependencyInjection", "OptionsPattern_with_DependencyInjection\OptionsPattern_with_DependencyInjection.csproj", "{714E5CAE-90D7-41ED-BC24-A111DA0638A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecretManagerTools", "SecretManagerTools\SecretManagerTools.csproj", "{EA6BD3B8-D550-4292-886A-959B9F0F41E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecretManagerTools", "SecretManagerTools\SecretManagerTools.csproj", "{EA6BD3B8-D550-4292-886A-959B9F0F41E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Environment", "Environment\Environment.csproj", "{2E27D505-9037-4933-BB6F-90217684F099}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{EA6BD3B8-D550-4292-886A-959B9F0F41E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA6BD3B8-D550-4292-886A-959B9F0F41E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA6BD3B8-D550-4292-886A-959B9F0F41E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E27D505-9037-4933-BB6F-90217684F099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E27D505-9037-4933-BB6F-90217684F099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E27D505-9037-4933-BB6F-90217684F099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E27D505-9037-4933-BB6F-90217684F099}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
