@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using ViewModel_DTO.Business;
@@ -9,6 +10,12 @@ namespace ViewModel_DTO.Controllers
 {
     public class EmployeeController : Controller
     {
+        public IMapper Mapper { get; }
+
+        public EmployeeController(IMapper mapper)
+        {
+            Mapper = mapper;
+        }
         public IActionResult Index()
         {
             return View();
@@ -28,14 +35,18 @@ namespace ViewModel_DTO.Controllers
             //EmployeeCreateViewModel vm  = employee;
             #endregion
             #region Explicit
-            Employee employee = (Employee)employeeCreateViewModel;// We have to force the casting operation
-            EmployeeCreateViewModel vm = (EmployeeCreateViewModel)employee;
+            //Employee employee = (Employee)employeeCreateViewModel;// We have to force the casting operation
+            //EmployeeCreateViewModel vm = (EmployeeCreateViewModel)employee;
             #endregion
             #region Reflection
 
-            Employee e =TypeConversion.Conversion<EmployeeCreateViewModel, Employee>(employeeCreateViewModel);
-            EmployeeListViewModel vm = TypeConversion.Conversion<Employee, EmployeeListViewModel>(new Employee { Name="Alperen", Surname="Gunes"});
+            //Employee e =TypeConversion.Conversion<EmployeeCreateViewModel, Employee>(employeeCreateViewModel);
+            //EmployeeListViewModel vmm = TypeConversion.Conversion<Employee, EmployeeListViewModel>(new Employee { Name="Alperen", Surname="Gunes"});
 
+            #endregion
+            #region AutoMapper
+            Employee ep =Mapper.Map<Employee>(employeeCreateViewModel);
+            EmployeeCreateViewModel v = Mapper.Map<EmployeeCreateViewModel>(ep);
             #endregion
 
 
