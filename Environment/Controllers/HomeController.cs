@@ -25,6 +25,9 @@ namespace Environment.Controllers
 
         public IActionResult Index()
         {
+
+            ViewBag.msg = _configuration["msg"];
+
             var value_a = _configuration["a"];// Environment variables crush the appsettings.json and appsettings.Development.json and secrets.json
 
             if (_webHostEnvironment.IsDevelopment())
