@@ -18,7 +18,7 @@ namespace Configuration_appsettings_files
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-            .ConfigureAppConfiguration(b=>b.AddJsonFile("Alperen.json"))
+            .ConfigureAppConfiguration(b=>b.AddJsonFile("alperen.json"))
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();

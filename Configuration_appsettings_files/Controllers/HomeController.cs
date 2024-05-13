@@ -1,5 +1,6 @@
 ﻿using Configuration_appsettings_files.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -11,11 +12,10 @@ namespace Configuration_appsettings_files.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IConfiguration _configuration;
+        public HomeController(IConfiguration configuration)
         {
-            _logger = logger;
+            _configuration = configuration;
         }
 
         public IActionResult Index()
@@ -25,6 +25,12 @@ namespace Configuration_appsettings_files.Controllers
 
         public IActionResult Privacy()
         {
+            var v1= _configuration["SampleText"]; 
+            var v2 = _configuration["Person"];
+            var v3 = _configuration["Person:Name"];
+            var v4 = _configuration["Person:Surname"];
+            var v5 = _configuration["Logging:LogLevel:Microsoft.Hosting.Lifetime"];
+
             return View();
         }
 
