@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using OptionsPattern_with_DependencyInjection.Models;
 using System;
 using System.Collections.Generic;
@@ -12,22 +13,41 @@ namespace OptionsPattern_with_DependencyInjection.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IConfiguration _configuration;
-        public HomeController(IConfiguration configuration)
-        {
-            _configuration = configuration;
-        }
+        #region IConfiguration
+        //private readonly IConfiguration _configuration;
+        //public HomeController(IConfiguration configuration)
+        //{
+        //    _configuration = configuration;
+        //}
+        //public IActionResult Index()
+        //{
+        //    string host = _configuration["MailInfo:MailHost"];
+        //    string port = _configuration["MailInfo:MailPort"];
 
+        //    MailInfo mailInfo = _configuration.GetSection("MailInfo").Get<MailInfo>();
+
+
+        //    return View();
+        //}
+        #endregion
+
+        #region IOption
+        MailInfo _mailInfo;
+        public HomeController(IOptions<MailInfo>mailInfo)
+        {
+            _mailInfo = mailInfo.Value;
+        }
         public IActionResult Index()
         {
-            string host=_configuration["MailInfo:MailHost"];
-            string port = _configuration["MailInfo:MailPort"];
 
-           MailInfo mailInfo= _configuration.GetSection("MailInfo").Get<MailInfo>();
-
+            
 
             return View();
         }
+        #endregion
+
+
+
 
         public IActionResult Privacy()
         {

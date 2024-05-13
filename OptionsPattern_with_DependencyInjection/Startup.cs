@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using OptionsPattern_with_DependencyInjection.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace OptionsPattern_with_DependencyInjection
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.Configure<MailInfo>(Configuration.GetSection("MailInfo"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
