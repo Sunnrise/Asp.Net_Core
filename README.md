@@ -1,6 +1,6 @@
 # ASP.NET Core 5.0 Project
 
-This repository contains the code for various ASP.NET Core 5.0 projects and topics that I have worked on, based on a comprehensive YouTube playlist and additional resources by [Gençay Yıldız](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ) and [@gncyyldz](https://github.com/gncyyldz).
+This repository contains the code for various ASP.NET Core 5.0 projects and topics that I have worked on, based on a comprehensive YouTube playlist and additional resources by [Gençay Yıldız](https://www.youtube.com/c/Gen%C3%A7ayY%C4%B1ld%C4%B1z) and [@gncyyldz](https://github.com/gncyyldz).
 
 ## Table of Contents
 
